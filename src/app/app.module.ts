@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ScrolltriggerComponent } from './scrolltrigger/scrolltrigger.component';
+import { StarfieldComponent } from './starfield/starfield.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ScrolltriggerComponent,
+    StarfieldComponent
   ],
   imports: [
     BrowserModule,
