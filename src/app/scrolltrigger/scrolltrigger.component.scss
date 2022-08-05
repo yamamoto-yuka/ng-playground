@@ -1,40 +1,54 @@
+@keyframes topTobottom {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Futura
-}
 
-.vh {
-  height: 100vh;
-  background-color: rgba(255,0,0,0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10vw;
-  font-weight: bold;
-}
-
-.vh:before {
-  content: '100VH'
-}
-
-.philosophie {
+.philosophie{
   position: relative;
+  background-color: #0d0d0d;
 }
 
 .indicators {
-  left: 2rem;
+  left: 8%;
   top: 0;
   margin: 10vh 0;
-  height: 80vh;
-  width: 3px;
+  height: 50vh;
+  width: 1.5px;
   display: none;
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
+}
+
+.nav {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  transform: translate(-5%, -65%);
+  font-size: .8rem;
+  font-family: "lato";
+  color: white;
+}
+
+.line {
+  position: absolute;
+  top: 70%;
+  left: 8%;
+  width: 1.5px;
+  animation: topTobottom 1s normal forwards ease-in-out ;
+  background-color: white;
 }
 
 .indicator {
@@ -48,23 +62,81 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 4rem;
-  outline: 1px solid red
 }
 
+.point {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+img {
+  height: 80vh;
+  width: 80%;
+  filter: brightness(45%);
+}
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
 .philosophie .wrapper {
   height: 100vh;
   width: 100%;
 }
 
-.point article {
-  flex-basis: 60%;
-  margin-right: auto;
+h3 {
+  margin: 0;
+  font-size: 4.5rem;
+  font-family: "Anton";
+  letter-spacing: 7px;
+  color: white;
 }
 
-.point img {
-  flex-basis: 25%;
-  max-width: 25vw;
-  height: auto;
+.skill {
+  margin: 1rem 0;
+  display: flex;
+  font-size: 0.8rem;
+  color: white;
+  font-family: "lato";
+  p {
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-right: 1rem;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    li {
+      padding: 0 1rem;
+      border-right: 1px solid white;
+      position: relative;
+    }
+    li:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.detail-btn{
+  cursor: pointer;
+  padding: 10px 20px;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  font-family: "lato";
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+.detail-btn:hover{
+  color: #917C46;
+  background-color: white;
 }
