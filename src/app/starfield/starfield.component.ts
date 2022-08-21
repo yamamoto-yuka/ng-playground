@@ -57,10 +57,10 @@ export class StarfieldComponent implements OnInit {
         let xx = x;
         let zz = z;
         // Line start
-        // pa[6*line_index] = x;
-        // pa[6*line_index+1] = y;
-        // pa[6*line_index+2] = z;
-
+        let starline = pa[6*line_index];
+        starline = x;
+        pa[6*line_index+1];
+        pa[6*line_index+2];
       }
     };
   }
